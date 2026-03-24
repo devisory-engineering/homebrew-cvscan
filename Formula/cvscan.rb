@@ -5,21 +5,21 @@
 class Cvscan < Formula
   desc "Cloudvisor Security Scanner - secrets & IaC misconfiguration scanning"
   homepage "https://github.com/devisory-engineering/cvscan"
-  version "0.1.1"
+  version "0.1.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/devisory-engineering/cvscan/releases/download/v0.1.1/cvscan_0.1.1_darwin_amd64.tar.gz"
-      sha256 "afcc57676309cf850414f97583411fc9b122e840845c68604c492840b0dcace2"
+      url "https://github.com/devisory-engineering/cvscan/releases/download/v0.1.2/cvscan_0.1.2_darwin_amd64.tar.gz"
+      sha256 "b1f89f2ce6bbdd62e6af548206d0ad371379cbc6dc941cfef5d30b6542bc8046"
 
       define_method(:install) do
         bin.install "cvscan"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/devisory-engineering/cvscan/releases/download/v0.1.1/cvscan_0.1.1_darwin_arm64.tar.gz"
-      sha256 "e228cfb851fef1a3b238edab7b9590de8bf78dbf9e923d993b956a24d7bc9c69"
+      url "https://github.com/devisory-engineering/cvscan/releases/download/v0.1.2/cvscan_0.1.2_darwin_arm64.tar.gz"
+      sha256 "9f245855cf12ea65268393bcd80d50065701561c477a2845db2594a59c24c60a"
 
       define_method(:install) do
         bin.install "cvscan"
@@ -29,15 +29,15 @@ class Cvscan < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/devisory-engineering/cvscan/releases/download/v0.1.1/cvscan_0.1.1_linux_amd64.tar.gz"
-      sha256 "755427cb08a4f9c54f8be98f059c8d0466982ab9db8135b5228b8ccd2a0e5e8d"
+      url "https://github.com/devisory-engineering/cvscan/releases/download/v0.1.2/cvscan_0.1.2_linux_amd64.tar.gz"
+      sha256 "f784888b091214f5a91909b433cad7153b4cc763ed0913b1515197a8cca2b29f"
       define_method(:install) do
         bin.install "cvscan"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/devisory-engineering/cvscan/releases/download/v0.1.1/cvscan_0.1.1_linux_arm64.tar.gz"
-      sha256 "7ddd6162a889814d2d63c2461f0fdf262e54672369e8deb3cbb4d48e85a009b8"
+      url "https://github.com/devisory-engineering/cvscan/releases/download/v0.1.2/cvscan_0.1.2_linux_arm64.tar.gz"
+      sha256 "2853a973031dd079c16b1873fb54b3ab133f028c003ee836ace119ad9a32de7c"
       define_method(:install) do
         bin.install "cvscan"
       end
